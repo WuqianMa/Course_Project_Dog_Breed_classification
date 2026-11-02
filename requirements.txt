@@ -1,0 +1,31 @@
+# Pinned dependencies for the dog-breed-classification project.
+#
+# Two use-cases are covered:
+#   (a) Re-running the notebook end-to-end on a GPU (Colab A100 or equivalent).
+#   (b) Re-generating the report figures locally from artifacts/*.csv
+#       (lightweight: only needs numpy / pandas / matplotlib).
+#
+# Versions below are the defaults that the notebook was developed against
+# in May 2026. They are pinned with `==` so that future PyPI default
+# resolutions cannot silently change behaviour. To update, bump a single
+# line and re-run the notebook end-to-end.
+
+# ---- core scientific stack (figures + analysis) ------------------------
+numpy==2.0.2
+pandas==2.3.3
+matplotlib==3.9.4
+seaborn==0.13.2
+pillow==11.0.0
+tqdm==4.66.5
+scikit-learn==1.5.2
+
+# ---- deep learning (notebook only) -------------------------------------
+torch==2.10.0
+torchvision==0.25.0
+timm==1.0.11
+transformers==4.51.0           # Grounding-DINO post-processing API
+albumentations==1.4.18
+
+# ---- notebook environment ----------------------------------------------
+jupyter==1.1.1
+ipykernel==6.29.5
